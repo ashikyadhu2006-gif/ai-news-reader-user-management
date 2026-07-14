@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" styleClass="gradient-bg" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.newsreader.controller.RegisterController">
+    <stylesheets>
+        <URL value="@../css/styles.css" />
+    </stylesheets>
+    
+    <VBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="CENTER" spacing="5.0">
+            <Label styleClass="title-label" text="AI NEWS &amp; NOTICE READER" />
+            <Label styleClass="subtitle-label" text="Create your reader account today" />
+        </VBox>
+        
+        <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="480.0" spacing="15.0" styleClass="card">
+            <Label styleClass="section-label" text="Register User" />
+            
+            <VBox spacing="6.0">
+                <Label styleClass="form-label" text="Username" />
+                <TextField fx:id="usernameField" promptText="Choose a username" />
+            </VBox>
+            
+            <VBox spacing="6.0">
+                <Label styleClass="form-label" text="Email Address" />
+                <TextField fx:id="emailField" promptText="Enter a valid email" />
+            </VBox>
+            
+            <VBox spacing="6.0">
+                <Label styleClass="form-label" text="System Role" />
+                <ComboBox fx:id="roleComboBox" maxWidth="1.7976931348623157E308" promptText="Select Role" />
+            </VBox>
+            
+            <HBox spacing="15.0">
+                <VBox HBox.hgrow="ALWAYS" spacing="6.0">
+                    <Label styleClass="form-label" text="Password" />
+                    <PasswordField fx:id="passwordField" promptText="Min 6 chars" />
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS" spacing="6.0">
+                    <Label styleClass="form-label" text="Confirm Password" />
+                    <PasswordField fx:id="confirmPasswordField" promptText="Repeat password" />
+                </VBox>
+            </HBox>
+            
+            <Button maxWidth="1.7976931348623157E308" onAction="#handleRegister" styleClass="button-primary" text="Register" />
+            
+            <VBox alignment="CENTER" style="-fx-padding: 5px 0 0 0;">
+                <Hyperlink onAction="#handleNavigateToLogin" styleClass="hyperlink-custom" text="Already have an account? Sign In" />
+            </VBox>
+        </VBox>
+    </VBox>
+</AnchorPane>
