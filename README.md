@@ -51,3 +51,26 @@ On first launch, the local database connection initializes `newsreader.db` and i
 |---|---|---|---|
 | **Admin** | `admin` | `admin@newsreader.com` | `admin123` |
 | **User** | `john_doe` | `john@newsreader.com` | `user123` |
+
+---
+
+## 🌐 Deploy to Railway
+
+This application can be deployed directly to [Railway](https://railway.app) and accessed in your browser via a virtual desktop interface (powered by Docker, Xvfb, Fluxbox, and noVNC).
+
+### 🚀 Quick Deploy Steps
+
+1. **Create/Link GitHub Repository**:
+   - Push this codebase to a new repository on your GitHub account.
+2. **Deploy on Railway**:
+   - Log in to your [Railway Dashboard](https://railway.app).
+   - Click **New Project** -> **Deploy from GitHub repo**.
+   - Select your repository.
+3. **Configure Network**:
+   - Railway will automatically detect the `Dockerfile` and start building it.
+   - Go to your service's **Settings** tab in Railway.
+   - Under the **Networking** section, click **Generate Domain** to get a public URL.
+   - Railway will automatically bind the app to the dynamic `PORT` environment variable.
+4. **Access the App**:
+   - Open the generated public URL in your browser.
+   - The noVNC web client will connect, showing the desktop environment running the application!

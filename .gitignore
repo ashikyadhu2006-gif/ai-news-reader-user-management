@@ -1,0 +1,19 @@
+# Maven target directory
+target/
+
+# Local Maven portable directory
+.maven/
+
+# SQLite Database
+*.db
+*.db-journal
+*.db-wal
+
+# IDE files
+.idea/
+*.iml
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
